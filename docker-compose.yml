@@ -1,0 +1,22 @@
+#
+# Docker deluge environment.
+#
+---
+
+version: '3.7'
+
+services:
+  deluge:
+    build:
+      context: './docker'
+
+    ports:
+      - 8112:8112
+
+    volumes:
+      - ./docker/volumes/config:/root/.config/deluge/
+      - ./docker/volumes/torrent:/deluge/torrent
+      - ./docker/volumes/plugins:/deluge/plugins
+      - ./docker/volumes/autoload:/deluge/autoload
+      - ./docker/volumes/downloads:/deluge/downloads
+      - ./docker/volumes/completed:/deluge/completed

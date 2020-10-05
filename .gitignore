@@ -1,0 +1,4 @@
+.idea
+.DS_Store
+docker/volumes/config/*
+!docker/volumes/config/core.conf.example
