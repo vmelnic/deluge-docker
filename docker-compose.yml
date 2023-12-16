@@ -9,10 +9,8 @@ services:
   deluge:
     build:
       context: './docker'
-
     ports:
       - 8112:8112
-
     volumes:
       - ./docker/volumes/config:/root/.config/deluge/
       - ./docker/volumes/torrent:/deluge/torrent
